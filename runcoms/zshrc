@@ -4,10 +4,23 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+export TERM="xterm-256color"
+unsetopt share_history
+
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+bindkey -v
+bindkey '^R' history-incremental-pattern-search-backward
+
 # Customize to your needs...
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv rbenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode vcs root_indicator background_jobs)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right
+unsetopt share_history
+
+eval "$(vex --shell-config zsh)"

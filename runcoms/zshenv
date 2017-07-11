@@ -9,3 +9,7 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+export PROJECT_HOME="$HOME/workspace"
+export VIRTUALENVWRAPPER_VIRTUALENV="$HOME/.local/bin/virtualenvwrapper.sh"
+export VIRTUALENVWRAPPER_SCRIPT="$VIRTUALENVWRAPPER_VIRTUALENV"
