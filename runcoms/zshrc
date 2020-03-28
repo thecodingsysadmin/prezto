@@ -21,6 +21,10 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv rbenv)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vi_mode vcs root_indicator background_jobs)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_SHORTEN_STRATEGY=truncate_from_right
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$ "
 unsetopt share_history
 
 eval "$(vex --shell-config zsh)"
+
+#AWSume alias to source the AWSume script
+alias awsume=". awsume"
