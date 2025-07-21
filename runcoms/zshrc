@@ -49,3 +49,6 @@ if type brew &>/dev/null; then
   compinit
 fi
 
+
+# Created by `pipx` on 2024-02-06 02:35:21
+export PATH="$PATH:/Users/chao.luan/.local/bin"
